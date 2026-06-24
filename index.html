@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Language Share</title>
+    <title>Team Language Hub</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         body { background-color: #f3f4f6; }
@@ -11,57 +11,95 @@
 </head>
 <body class="font-sans antialiased text-gray-900">
 
-    <div class="max-w-4xl mx-auto px-4 py-8">
+    <div class="max-w-6xl mx-auto px-4 py-8">
         <header class="text-center mb-10">
-            <h1 class="text-4xl font-extrabold text-indigo-600 tracking-tight">🌍 Team Language Share</h1>
-            <p class="text-gray-600 mt-2">Learn phrases from your teammates around the world!</p>
+            <h1 class="text-4xl font-extrabold text-indigo-600 tracking-tight">🌍 Team Language Hub</h1>
+            <p class="text-gray-600 mt-2">Share your native phrases or ask your teammates how to say something!</p>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="md:col-span-1 bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-fit">
-                <h2 class="text-xl font-bold mb-4 text-gray-800">Share a Phrase</h2>
-                <form id="phraseForm" class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-1">Your Name</label>
-                        <input type="text" id="userName" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., Alex">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-1">Language</label>
-                        <input type="text" id="language" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., Spanish, Tagalog">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-1">Original Phrase</label>
-                        <input type="text" id="nativePhrase" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., ¡Hola, buenos días!">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-1">How to Pronounce</label>
-                        <input type="text" id="pronunciation" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., Oh-lah, bweh-nos dee-ahs">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-1">English Translation</label>
-                        <input type="text" id="englishTranslation" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., Hello, good morning!">
-                    </div>
-                    <button type="submit" class="w-full bg-indigo-600 text-white font-medium py-2 rounded-lg hover:bg-indigo-700 transition duration-200">Share with Team</button>
-                </form>
-            </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="space-y-6 lg:col-span-1">
+                <div class="bg-white p-6 rounded-2xl shadow-xs border border-gray-100">
+                    <h2 class="text-xl font-bold mb-1 text-gray-800">Share a Phrase</h2>
+                    <p class="text-xs text-gray-500 mb-4">Teach your team a phrase from your language.</p>
+                    <form id="phraseForm" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Your Name</label>
+                            <input type="text" id="userName" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., Alex">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Language</label>
+                            <input type="text" id="language" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., Spanish, Tagalog">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Original Phrase</label>
+                            <input type="text" id="nativePhrase" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., ¡Hola, buenos días!">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">How to Pronounce</label>
+                            <input type="text" id="pronunciation" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., Oh-lah, bweh-nos dee-ahs">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">English Translation</label>
+                            <input type="text" id="englishTranslation" required class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., Hello, good morning!">
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 text-white font-medium py-2 rounded-lg hover:bg-indigo-700 transition duration-200">Share with Team</button>
+                    </form>
+                </div>
 
-            <div class="md:col-span-2">
-                <h2 class="text-xl font-bold mb-4 text-gray-800 flex items-center justify-between">
-                    <span>Our Team's Phrases</span>
-                    <span id="phraseCount" class="text-sm font-normal bg-indigo-100 text-indigo-800 px-2.5 py-0.5 rounded-full">0 phrases</span>
-                </h2>
-                <div id="phrasesList" class="space-y-4">
-                    <div class="text-center py-8 text-gray-500">Loading phrases...</div>
+                <div class="bg-indigo-50/60 p-6 rounded-2xl border border-indigo-100">
+                    <h2 class="text-xl font-bold mb-1 text-indigo-900">Request a Phrase</h2>
+                    <p class="text-xs text-indigo-700/80 mb-4">Ask how to translate a specific word or sentence.</p>
+                    <form id="requestForm" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-indigo-900 mb-1">Your Name</label>
+                            <input type="text" id="reqName" required class="w-full px-3 py-2 bg-white border border-indigo-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-indigo-900 mb-1">What do you want to say?</label>
+                            <input type="text" id="reqPhrase" required class="w-full px-3 py-2 bg-white border border-indigo-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., Thank you very much / Good luck">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-indigo-900 mb-1">Target Language</label>
+                            <input type="text" id="reqLanguage" required class="w-full px-3 py-2 bg-white border border-indigo-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g., Japanese, French, Any">
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-800 text-white font-medium py-2 rounded-lg hover:bg-indigo-900 transition duration-200">Post Request</button>
+                    </form>
                 </div>
             </div>
+
+            <div class="lg:col-span-2 space-y-8">
+                <div>
+                    <h2 class="text-xl font-bold mb-4 text-gray-800 flex items-center justify-between">
+                        <span>🤔 Pending Requests</span>
+                        <span id="requestCount" class="text-sm font-normal bg-amber-100 text-amber-800 px-2.5 py-0.5 rounded-full">0 requests</span>
+                    </h2>
+                    <div id="requestsList" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        </div>
+                </div>
+
+                <hr class="border-gray-200 my-6" />
+
+                <div>
+                    <h2 class="text-xl font-bold mb-4 text-gray-800 flex items-center justify-between">
+                        <span>💡 Shared Knowledge Feed</span>
+                        <span id="phraseCount" class="text-sm font-normal bg-indigo-100 text-indigo-800 px-2.5 py-0.5 rounded-full">0 phrases</span>
+                    </h2>
+                    <div id="phrasesList" class="space-y-4">
+                        <div class="text-center py-8 text-gray-500">Loading phrases...</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { getFirestore, collection, addDoc, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+        import { getFirestore, collection, addDoc, onSnapshot, query, orderBy, doc, deleteDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
-        // Your exact Firebase configuration integrated successfully
+        // Firebase Configuration Block
         const firebaseConfig = {
             apiKey: "AIzaSyCjHpHyxq6osgdUQNbHS0_RtGKj55ON0IE",
             authDomain: "cb-team-language-share.firebaseapp.com",
@@ -74,16 +112,33 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
+        
+        // Database Collections References
         const phrasesCollection = collection(db, "phrases");
+        const requestsCollection = collection(db, "requests");
 
-        // UI Elements
+        // Global UI Selectors
         const phraseForm = document.getElementById('phraseForm');
         const phrasesList = document.getElementById('phrasesList');
         const phraseCount = document.getElementById('phraseCount');
+        
+        const requestForm = document.getElementById('requestForm');
+        const requestsList = document.getElementById('requestsList');
+        const requestCount = document.getElementById('requestCount');
 
-        // Listen for Real-time Updates from Firestore
-        const q = query(phrasesCollection, orderBy("createdAt", "desc"));
-        onSnapshot(q, (snapshot) => {
+        // Sync local input fields synchronization layout wrapper helper
+        const syncUserName = (name) => {
+            document.getElementById('userName').value = name;
+            document.getElementById('reqName').value = name;
+        };
+        document.getElementById('userName').addEventListener('input', (e) => syncUserName(e.target.value));
+        document.getElementById('reqName').addEventListener('input', (e) => syncUserName(e.target.value));
+
+        /* =========================================================================
+           REAL-TIME LISTENER: SHARED PHRASES
+           ========================================================================= */
+        const qPhrases = query(phrasesCollection, orderBy("createdAt", "desc"));
+        onSnapshot(qPhrases, (snapshot) => {
             phrasesList.innerHTML = "";
             phraseCount.textContent = `${snapshot.size} phrase${snapshot.size === 1 ? '' : 's'}`;
 
@@ -111,17 +166,73 @@
             });
         });
 
-        // Handle Form Submission
-        phraseForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const userName = document.getElementById('userName').value;
-            const language = document.getElementById('language').value;
-            const nativePhrase = document.getElementById('nativePhrase').value;
-            const pronunciation = document.getElementById('pronunciation').value;
-            const englishTranslation = document.getElementById('englishTranslation').value;
+        /* =========================================================================
+           REAL-TIME LISTENER: REQUESTED PHRASES
+           ========================================================================= */
+        const qRequests = query(requestsCollection, orderBy("createdAt", "desc"));
+        onSnapshot(qRequests, (snapshot) => {
+            requestsList.innerHTML = "";
+            requestCount.textContent = `${snapshot.size} request${snapshot.size === 1 ? '' : 's'}`;
+
+            if (snapshot.empty) {
+                requestsList.innerHTML = `<div class="col-span-full bg-gray-50 p-6 rounded-2xl text-center text-gray-400 border border-dashed border-gray-200 text-sm">No active requests right now.</div>`;
+                return;
+            }
+
+            snapshot.forEach((docSnap) => {
+                const data = docSnap.data();
+                const id = docSnap.id;
+                const card = document.createElement('div');
+                card.className = "bg-white p-4 rounded-xl border border-amber-100 shadow-2xs flex flex-col justify-between";
+                card.innerHTML = `
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-amber-50 text-amber-800 text-xs font-semibold px-2 py-0.5 rounded">Target: ${data.reqLanguage}</span>
+                            <span class="text-[10px] text-gray-400">Asked by ${data.reqName}</span>
+                        </div>
+                        <p class="text-gray-800 font-medium text-sm">How do you say:</p>
+                        <p class="text-lg font-bold text-gray-900 italic my-1">"${data.reqPhrase}"</p>
+                    </div>
+                    <div class="mt-3 pt-2 border-t border-gray-50">
+                        <button onclick="toggleAnswerForm('${id}')" class="text-xs text-indigo-600 hover:text-indigo-800 font-semibold flex items-center gap-1 cursor-pointer">
+                            ✍️ Answer this request
+                        </button>
+                        
+                        <div id="form-${id}" class="hidden mt-3 p-3 bg-gray-50 rounded-lg border border-gray-200 space-y-2">
+                            <input type="text" id="ansName-${id}" placeholder="Your Name" value="${document.getElementById('userName').value}" class="w-full text-xs px-2 py-1.5 bg-white border border-gray-300 rounded">
+                            <input type="text" id="ansNative-${id}" placeholder="Phrase in native language" class="w-full text-xs px-2 py-1.5 bg-white border border-gray-300 rounded">
+                            <input type="text" id="ansPronounce-${id}" placeholder="How to pronounce" class="w-full text-xs px-2 py-1.5 bg-white border border-gray-300 rounded">
+                            <input type="text" id="ansEnglish-${id}" placeholder="English Meaning" value="${data.reqPhrase}" class="w-full text-xs px-2 py-1.5 bg-white border border-gray-300 rounded">
+                            <button onclick="submitAnswer('${id}', '${data.reqLanguage}')" class="w-full bg-indigo-600 text-white text-xs font-medium py-1.5 rounded hover:bg-indigo-700">Submit Answer</button>
+                        </div>
+                    </div>
+                `;
+                requestsList.appendChild(card);
+            });
+        });
+
+        // Toggle visibility of inline answer elements
+        window.toggleAnswerForm = (id) => {
+            const el = document.getElementById(`form-${id}`);
+            el.classList.toggle('hidden');
+            // Autofill the current profile username cleanly
+            document.getElementById(`ansName-${id}`).value = document.getElementById('userName').value;
+        };
+
+        // Submit Inline Answer Handler Function
+        window.submitAnswer = async (id, language) => {
+            const userName = document.getElementById(`ansName-${id}`).value.trim();
+            const nativePhrase = document.getElementById(`ansNative-${id}`).value.trim();
+            const pronunciation = document.getElementById(`ansPronounce-${id}`).value.trim();
+            const englishTranslation = document.getElementById(`ansEnglish-${id}`).value.trim();
+
+            if(!userName || !nativePhrase || !pronunciation || !englishTranslation) {
+                alert("Please complete all response fields.");
+                return;
+            }
 
             try {
+                // 1. Post directly to Shared Knowledge Feed
                 await addDoc(phrasesCollection, {
                     userName,
                     language,
@@ -130,15 +241,54 @@
                     englishTranslation,
                     createdAt: new Date()
                 });
-                
-                // Clear descriptive inputs except username for sequential input speed
+
+                // 2. Clear out solved Request Ticket automatically from Firebase
+                await deleteDoc(doc(db, "requests", id));
+            } catch (err) {
+                console.error("Submission failed: ", err);
+                alert("Error handling request resolution pipeline.");
+            }
+        };
+
+        /* =========================================================================
+           FORM SUBMISSIONS PIPELINES
+           ========================================================================= */
+        
+        // 1. Manual Native Phrase Share
+        phraseForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            try {
+                await addDoc(phrasesCollection, {
+                    userName: document.getElementById('userName').value,
+                    language: document.getElementById('language').value,
+                    nativePhrase: document.getElementById('nativePhrase').value,
+                    pronunciation: document.getElementById('pronunciation').value,
+                    englishTranslation: document.getElementById('englishTranslation').value,
+                    createdAt: new Date()
+                });
                 document.getElementById('language').value = '';
                 document.getElementById('nativePhrase').value = '';
                 document.getElementById('pronunciation').value = '';
                 document.getElementById('englishTranslation').value = '';
             } catch (error) {
-                console.error("Error adding document: ", error);
-                alert("Failed to save phrase. Check your Firestore date rules configuration.");
+                console.error(error);
+            }
+        });
+
+        // 2. Open Inquiry Translation Ticket Request Submission
+        requestForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            try {
+                await addDoc(requestsCollection, {
+                    reqName: document.getElementById('reqName').value,
+                    reqPhrase: document.getElementById('reqPhrase').value,
+                    reqLanguage: document.getElementById('reqLanguage').value,
+                    createdAt: new Date()
+                });
+                document.getElementById('reqPhrase').value = '';
+                document.getElementById('reqLanguage').value = '';
+            } catch (err) {
+                console.error(err);
             }
         });
     </script>
